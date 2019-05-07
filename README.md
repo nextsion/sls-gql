@@ -9,7 +9,7 @@ Serverless v1.30.0 or higher
 
 Once installed the Serverless CLI can be called with serverless or the shorthand sls command.
 
-`sls`
+`$ sls` -or- `$ serverless`
 
 Commands
 * You can run commands with "serverless" or the shortcut "sls"
@@ -17,17 +17,25 @@ Commands
 * Pass "--no-color" to disable CLI colors
 * Pass "--help" after any <command> for contextual help
 
-## 💾 Installation
+## 💾 Getting Started
+
+To get started with the project's config and set-up, run:
+
+`$ yarn` and then `$ sls offline`
+
+For manual- setup:
 
 Install the plugin via Yarn (recommended)
 
 ```
+
 yarn add serverless-appsync-plugin
 ```
 
 or via NPM
 
 ```
+
 npm install serverless-appsync-plugin
 ```
 
@@ -42,19 +50,20 @@ Velocity templates support.
 Lazy loading of your files with require cache invalidation: no need for a reloading tool like Nodemon.
 And more: integrations, authorizers, proxies, timeouts, responseParameters, HTTPS, CORS, etc...
 
-Install the plugin
+Install plugins and dependendencies
 
 ```
+
 npm install --save serverless-offline
 ```
 
 To start the local enviroment (/graphql path, in this case), in your project root run:
 
-`serverless offline` or `sls offline`.
+`$ serverless offline` or `$ sls offline`.
 
 to list all the options for the plugin run:
 
-`sls offline --help`
+`$ sls offline --help`
 
 And test it out on `http://localhost:3000/graphql`.
 
@@ -62,19 +71,28 @@ And test it out on `http://localhost:3000/graphql`.
 
 This command will deploy all AppSync resources in the same CloudFormation template used by the other serverless resources.
 
-`sls deploy`
+`$ sls deploy`
+
+To get a list of your Service Info/appsync endpoint details in your terminal, run:
+
+`$ serverless deploy --package path-to-package`
 
 ## ✏️ Invoke deployed function
 
 Invoke deployed function with command invoke and --function or shorthand -f.
 
-`sls invoke -f graphql`
+`$ sls invoke -f graphql`
 
 In your terminal window you should see the response from AWS Lambda.
 
 ```
+
 {
     "statusCode": 200,
     "body": "{\"message\":\"Go Serverless v1.0! Your function executed successfully!\",\"input\":{}}"
 }
 ```
+
+## ❌ Remove and clean the resources in AWS
+
+`$ serverless remove`
