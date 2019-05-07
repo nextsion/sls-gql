@@ -9,10 +9,7 @@ Serverless v1.30.0 or higher
 
 Once installed the Serverless CLI can be called with serverless or the shorthand sls command.
 
-```
-
-sls
-```
+`sls`
 
 Commands
 * You can run commands with "serverless" or the shortcut "sls"
@@ -25,14 +22,12 @@ Commands
 Install the plugin via Yarn (recommended)
 
 ```
-
 yarn add serverless-appsync-plugin
 ```
 
 or via NPM
 
 ```
-
 npm install serverless-appsync-plugin
 ```
 
@@ -50,7 +45,6 @@ And more: integrations, authorizers, proxies, timeouts, responseParameters, HTTP
 Install the plugin
 
 ```
-
 npm install --save serverless-offline
 ```
 
@@ -79,7 +73,6 @@ Invoke deployed function with command invoke and --function or shorthand -f.
 In your terminal window you should see the response from AWS Lambda.
 
 ```
-
 {
     "statusCode": 200,
     "body": "{\"message\":\"Go Serverless v1.0! Your function executed successfully!\",\"input\":{}}"
