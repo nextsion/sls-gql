@@ -10,7 +10,9 @@ Serverless v1.30.0 or higher
 
 Once installed the Serverless CLI can be called with serverless or the shorthand sls command.
 
-`$ sls` -or- `$ serverless`
+`$ sls`
+or
+`$ serverless`
 
 Commands
 * You can run commands with "serverless" or the shortcut "sls"
@@ -65,11 +67,11 @@ To start the local enviroment (/graphql path, in this case), in your project roo
 
 `$ serverless offline` or `$ sls offline`.
 
-to list all the options for the plugin run:
+to list all the options for the plugin, run:
 
 `$ sls offline --help`
 
-And test it out on `http://localhost:3000/graphql`.
+And test it out at `http://localhost:3000/graphql`.
 
 ## 🚀 Serverless deploy
 
@@ -93,7 +95,7 @@ In your terminal window you should see the response from AWS Lambda.
 }
 ```
 
-❌ Cleanup service
+## ❌ Cleanup service
 
 If at any point, you no longer need the service, you can run the following command to remove the Functions, Events and Resources that were created, and ensure that you don't incur any unexpected charges.
 
