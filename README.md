@@ -70,10 +70,6 @@ This command will deploy all AppSync resources in the same CloudFormation templa
 
 `$ sls deploy`
 
-To get a list of your Service Info/appsync endpoint details in your terminal, run:
-
-`$ serverless deploy --package path-to-package`
-
 ## ✏️ Invoke deployed function
 
 Invoke deployed function with command invoke and --function or shorthand -f.
