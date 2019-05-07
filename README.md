@@ -23,7 +23,7 @@ Commands
 
 ## 💾 Installation
 
-To get quickly started, run
+For quick start, run:
 
 `$ yarn`
 
@@ -31,7 +31,7 @@ then
 
 `$ sls offline`
 
-For manual- setup:
+To manually install and setup plugins:
 
 Install the plugin via Yarn (recommended)
 
