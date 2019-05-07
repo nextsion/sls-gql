@@ -2,6 +2,7 @@
 
 You can now develop all of your AppSync API's locally using Serverless + Serverless-AppSync-Plugin! With support for AWS DynamoDB, AWS Lambda, and AWS Elasticsearch; you have everything you need to get started developing your AppSync API's locally.
 
+
 ## 🛠 Minimum requirements
 
 Node.js v8 or higher
@@ -17,11 +18,16 @@ Commands
 * Pass "--no-color" to disable CLI colors
 * Pass "--help" after any <command> for contextual help
 
-## 💾 Getting Started
 
-To get started with the project's config and set-up, run:
+## 💾 Installation
 
-`$ yarn` and then `$ sls offline`
+To get quickly started, run
+
+`$ yarn`
+
+then
+
+`$ sls offline`
 
 For manual- setup:
 
@@ -36,6 +42,7 @@ or via NPM
 ```
 npm install serverless-appsync-plugin
 ```
+
 
 ## 📝Offline support
 
@@ -70,6 +77,7 @@ This command will deploy all AppSync resources in the same CloudFormation templa
 
 `$ sls deploy`
 
+
 ## ✏️ Invoke deployed function
 
 Invoke deployed function with command invoke and --function or shorthand -f.
@@ -85,6 +93,8 @@ In your terminal window you should see the response from AWS Lambda.
 }
 ```
 
-❌ Remove and clean the resources in AWS
+❌ Cleanup service
+
+If at any point, you no longer need the service, you can run the following command to remove the Functions, Events and Resources that were created, and ensure that you don't incur any unexpected charges.
 
 `$ serverless remove`
