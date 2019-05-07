@@ -1,20 +1,7 @@
-type Charge {
-  id: ID!
-  chargeId: String!
-  amount: Int!
-  customer: String
+schema {
+    query: Query
 }
 
 type Query {
-  listCharges(limit: Int):[Charge]
-  getCharge(chargeId: String!): Charge
-}
-
-type Mutation {
-    createCharge(id: ID!,chargeId: String!,amount: Int,customer: String ): Charge
-}
-
-type Schema {
-  query: Query
-  mutation: Mutation
+    hello: String
 }

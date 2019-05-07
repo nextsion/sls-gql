@@ -1,5 +1,5 @@
 {
-  "name": "nextravel-sls-appsync",
+  "name": "my-service",
   "version": "1.0.0",
   "description": "",
   "main": "handler.js",
@@ -10,7 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "serverless": "^1.41.1",
-    "serverless-appsync-plugin": "^1.1.1"
+    "serverless": "^1.27.3",
+    "serverless-appsync-offline": "^1.3.3",
+    "serverless-appsync-plugin": "^1.1.1",
+    "serverless-offline": "^4.10.0",
+    "serverless-pseudo-parameters": "^1.6.0"
   }
 }
