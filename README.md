@@ -46,7 +46,7 @@ npm install serverless-appsync-plugin
 ```
 
 
-## 📝Offline support
+## 📝 Offline support
 
 The serverless-offline plugin emulates AWS λ and API Gateway on your local machine to speed up your development cycles. To do so, it starts an HTTP server that handles the request's lifecycle like APIG does and invokes your handlers.
 
@@ -73,6 +73,7 @@ to list all the options for the plugin, run:
 
 And test it out at `http://localhost:3000/graphql`.
 
+
 ## 🚀 Serverless deploy
 
 This command will deploy all AppSync resources in the same CloudFormation template used by the other serverless resources.
@@ -94,6 +95,7 @@ In your terminal window you should see the response from AWS Lambda.
     "body": "{\"message\":\"Go Serverless v1.0! Your function executed successfully!\",\"input\":{}}"
 }
 ```
+
 
 ## ❌ Cleanup service
 
