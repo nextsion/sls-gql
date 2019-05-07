@@ -28,14 +28,12 @@ For manual- setup:
 Install the plugin via Yarn (recommended)
 
 ```
-
 yarn add serverless-appsync-plugin
 ```
 
 or via NPM
 
 ```
-
 npm install serverless-appsync-plugin
 ```
 
@@ -53,7 +51,6 @@ And more: integrations, authorizers, proxies, timeouts, responseParameters, HTTP
 Install plugins and dependendencies
 
 ```
-
 npm install --save serverless-offline
 ```
 
@@ -86,13 +83,12 @@ Invoke deployed function with command invoke and --function or shorthand -f.
 In your terminal window you should see the response from AWS Lambda.
 
 ```
-
 {
     "statusCode": 200,
     "body": "{\"message\":\"Go Serverless v1.0! Your function executed successfully!\",\"input\":{}}"
 }
 ```
 
-## ❌ Remove and clean the resources in AWS
+❌ Remove and clean the resources in AWS
 
 `$ serverless remove`
