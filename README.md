@@ -1,38 +1,82 @@
-# api
+# Getting Started
 
-## Installation
-Download and install Java Development Kit (JDK), version 13.0 or later
+You can now develop all of your AppSync API's locally using Serverless + Serverless-AppSync-Plugin! With support for AWS DynamoDB, AWS Lambda, and AWS Elasticsearch; you have everything you need to get started developing your AppSync API's locally.
 
-Switch to your working branch, for instance ‘develop’ branch.
+## 🛠 Minimum requirements
 
-To install all dependencies and start the server, run the command:
+Node.js v8 or higher
+Serverless v1.30.0 or higher
 
-`./gradlew bootRun`
+Once installed the Serverless CLI can be called with serverless or the shorthand sls command.
 
-The tasks command lists Gradle tasks that you can also invoke, including those added by the base plugin, and custom tasks you just added as well
-
-`./gradlew tasks`
-
-### Connecting with MySql Database
-Inside the application.yml file of your resources folder, configure the following configurations to set-up a MySQL server:
-
-``` 
-Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
-spring.datasource.url = jdbc:mysql://localhost:3306/nextravel_spring
-spring.datasource.username = root //normally put your MySQL username 
-spring.datasource.password = YOUR_MYSQL_PASSWORD
-
-## Hibernate Properties
-# The SQL dialect makes Hibernate generate better SQL for the chosen database
-spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5InnoDBDialect
-# Hibernate ddl auto (create, create-drop, validate, update)
-spring.jpa.hibernate.ddl-auto = update
+```
+sls
 ```
 
-## Documentation
-http://localhost:8080/swagger-ui.html
+Commands
+* You can run commands with "serverless" or the shortcut "sls"
+* Pass "--verbose" to this command to get in-depth plugin info
+* Pass "--no-color" to disable CLI colors
+* Pass "--help" after any <command> for contextual help
 
-## Health, Info, Metrics
-http://localhost:8081/actuator
-http://localhost:8081/actuator/health
-http://localhost:8081/actuator/info
+## 💾 Installation
+
+Install the plugin via Yarn (recommended)
+
+```
+yarn add serverless-appsync-plugin
+```
+
+or via NPM
+
+```
+npm install serverless-appsync-plugin
+```
+
+## 📝Offline support
+
+The serverless-offline plugin emulates AWS λ and API Gateway on your local machine to speed up your development cycles. To do so, it starts an HTTP server that handles the request's lifecycle like APIG does and invokes your handlers.
+
+Features:
+
+Node.js, Python and Ruby λ runtimes.
+Velocity templates support.
+Lazy loading of your files with require cache invalidation: no need for a reloading tool like Nodemon.
+And more: integrations, authorizers, proxies, timeouts, responseParameters, HTTPS, CORS, etc...
+
+Install the plugin
+
+```
+npm install --save serverless-offline
+```
+
+To start the local enviroment (/graphql path, in this case), in your project root run:
+
+`serverless offline` or `sls offline`.
+
+to list all the options for the plugin run:
+
+`sls offline --help`
+
+And test it out on `http://localhost:3000/graphql`.
+
+## 🚀 Serverless deploy
+
+This command will deploy all AppSync resources in the same CloudFormation template used by the other serverless resources.
+
+`sls deploy`
+
+## ✏️ Invoke deployed function
+
+Invoke deployed function with command invoke and --function or shorthand -f.
+
+`sls invoke -f graphql`
+
+In your terminal window you should see the response from AWS Lambda.
+
+```
+{
+    "statusCode": 200,
+    "body": "{\"message\":\"Go Serverless v1.0! Your function executed successfully!\",\"input\":{}}"
+}
+```
